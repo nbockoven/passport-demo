@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Passport</title>
+  </head>
+  <body>
+    Home page for now.
+
+    <br>
+
+    <% if( !isAuthenticated ){ %>
+      <a href="/login">Log in here</a>
+      <a href="/api/data">data</a>
+    <% } else { %>
+      You're logged in, <%= user.name %>
+      <br>
+      <a href="/logout">Log out</a>
+      <br>
+      <a href="/api/data">data</a>
+    <% } %>
+  </body>
+</html>
